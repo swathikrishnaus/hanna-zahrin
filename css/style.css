@@ -1,0 +1,360 @@
+body {
+    font-family: 'Outfit';
+    font-size: 15px;
+    text-decoration: none;
+    background: linear-gradient(#000000, #2c1e10);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* -------------common css start-------------- */
+.head-color{
+    color: #C6915C;
+}
+.para-color{
+    color: #b8a694;
+}
+.button-style{
+    background-color: #C6915C;
+    color: #000000;
+    padding: 14px 30px;
+    border: 1px;
+    border-radius: 50%;
+    border-bottom: 3px solid #e8c29c;
+    display: inline-block;
+    transform-origin: 0 100%;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+}
+.button-style:hover {
+    animation-name: wobble-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+/* -------------common css end-------------- */
+
+/* -------------navbar start-------------- */
+.navbar{
+    background-color: #010100cc;
+}
+.navbar .nav-item .nav-link{
+    color: white;
+    transition: 0.3s ease;
+}
+.navbar .nav-item .nav-link:hover, .navbar .nav-item .nav-link.active, .navbar .nav-item .nav-link:focus{
+    color: #C6915C;
+    font-weight: bold;
+}
+.cv-btn{
+    background-color: #C6915C;
+    color: #000000;
+    padding: 14px 30px;
+    border: 1px;
+    border-radius: 50%;
+    border-bottom: 3px solid #e8c29c;
+}
+/* -------------navbar end-------------- */
+
+/* --------------------toggle button css start----------------------- */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #C6915C;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #C6915C;
+}
+  
+/* --------------------toggle button css end----------------------- */
+
+/* --------------------landing-page css end----------------------- */
+.landing-page{
+padding-top: 150px;
+}
+.landing-page .fullstack{
+    font-size: 45px;
+    font-family: "Lucida Console", Courier, monospace;
+}
+.landing-page  p{
+    text-align: justify;
+}
+.landing-page .experience-short{
+    margin-top: 30px;
+}
+.landing-page .exp-bg{
+    background-color: #C6915C;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    padding: 20px;
+}
+.landing-page .exp-1{
+    padding: 24px 33px;
+}
+.landing-page .exp-2{
+    margin-top: 4px;
+}
+.landing-page .exp-3{
+    padding: 24px 10px;
+}
+.landing-page .skill-bg{
+    border-bottom: 2px solid  #C6915C;
+    padding: 10px;
+}
+/* --------------------landing-page css end----------------------- */
+
+/* --------------------about start----------------------- */
+.about{
+    margin-top: 150px;
+}
+.about p{
+    text-align: justify;
+}
+.about .text-bg{
+    background-color: #C6915C;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.about .resume{
+    margin-top: 50px;
+    background-color: #231a11;
+    padding: 30px;
+}
+.about .resume .right-border{
+    border-right: 1px solid #C6915C;
+}
+.about .resume .education{
+    padding: 50px;
+}
+.about .resume .education b{
+    font-weight: lighter;
+}
+/* --------------------about end----------------------- */
+
+/* --------------------skills start----------------------- */
+.skills{
+    margin-top: 150px;
+}
+.skills .card{
+    border: 0;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-color: #312216;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.skills .skill-bg{
+    background-color: #433425;
+    padding: 20px 15px;
+    border-radius: 5px;
+}
+.skills .skill-bg img{
+    height: 60px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+.skills .card-items{
+    margin-top: 50px;
+}
+
+/* --------------------skills end----------------------- */
+
+/* --------------------portfolio start----------------------- */
+.portfolio{
+    margin-top: 150px;
+}
+/* .portfolio-top{
+
+} */
+.portfolio .portfolio-cards{
+    margin-top: 50px;
+}
+.portfolio .card{
+    background-color: #362a1e;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0;
+    transition: 0.3s ease;
+    margin: 10px;
+}
+.portfolio .card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #221b13;
+}
+.portfolio .card p{
+    text-align: justify;
+}
+.portfolio .portfolio-content{
+    height: 100%;
+}
+.portfolio .card .demo-btn{
+    background-image: linear-gradient(to right,#80502b , #221b13);
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: white;
+    border: 1px solid #C6915C;
+    transition: 0.3s ease;
+}
+.portfolio .card button:hover{
+    opacity: 0.5;
+}
+.portfolio .card .git-btn{
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: 1px solid #C6915C;
+    color: white;
+    transition: 0.3s ease;
+}
+/* --------------------portfolio end----------------------- */
+
+/* --------------------testimonial start----------------------- */
+ .testimonial{
+    margin-top: 150px;
+ }
+ .testimonial .testimonial-carousel{
+    margin-top: 50px;
+ }
+ .testimonial .testimonial-carousel .card{
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    background-color: #231a11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+ }
+ .testimonial .testimonial-carousel .card hr{
+    background-color: #C6915C;
+ }
+ .testimonial img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+ }
+/* --------------------testimonial end----------------------- */
+
+/* --------------------contact start----------------------- */
+.contact{
+    margin-top: 150px;
+}
+.contact .mail a{
+    color: #b8a694;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contact .mail a:hover{
+    color: #C6915C;
+    font-size: 22px;
+}
+.contact .social i{
+    color: #b8a694;
+    transition: 0.3s ease;
+    font-size: 20px;
+}
+.contact .social i:hover{
+    color: #C6915C;
+    font-size: 25px;
+}
+.contact  form{
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: 30px 20px;
+    background-image: linear-gradient(to right,#362a1f , #604224);
+    border-radius: 10px;
+}
+.contact  form textarea, .contact  form input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #6e6d6d;
+    border-radius: 0;
+    color: #b8a694;
+}
+.contact  form textarea::placeholder, .contact  form input::placeholder{
+    color: #b8a694;
+}
+/* --------------------contact end----------------------- */
+
+/* --------------------footer start----------------------- */
+.footer{
+    margin-top: 150px;
+    background-color: #000000;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.footer .icons i{
+    transition: 0.3s ease;
+    font-size: 20px;
+    color: #b8a694;
+}
+.footer .mail a{
+    color: #b8a694;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.footer a:hover, .footer i:hover{
+    color: #C6915C;
+}
+.footer hr{
+    background-color: #6e6d6d;
+}
+/* --------------------footer end----------------------- */
