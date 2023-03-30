@@ -18,7 +18,7 @@ navLinks.forEach(link => {
 });
 
 // Add a scroll event listener to the window
-window.addEventListener( function() {
+window.addEventListener('scroll', function() {
   // Get the current scroll position
   const scrollPosition = window.scrollY;
   

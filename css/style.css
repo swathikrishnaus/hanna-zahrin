@@ -26,6 +26,26 @@ body {
     -webkit-tap-highlight-color: transparent;
     transform: translateZ(0);
 }
+@keyframes wobble-top {
+    16.65% {
+      transform: skew(-12deg);
+    }
+    33.3% {
+      transform: skew(10deg);
+    }
+    49.95% {
+      transform: skew(-6deg);
+    }
+    66.6% {
+      transform: skew(4deg);
+    }
+    83.25% {
+      transform: skew(-2deg);
+    }
+    100% {
+      transform: skew(0);
+    }
+  }
 .button-style:hover {
     animation-name: wobble-top;
     animation-duration: 1s;
@@ -33,6 +53,50 @@ body {
     animation-iteration-count: 1;
   }
 /* -------------common css end-------------- */
+
+/* -------------------cursor css start----------------- */
+.cursor,
+.cursor2{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%
+}
+.cursor{
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2{
+	border: 3px solid #fff;
+	box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+.cursor2.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none;
+	background: rgba(255,255,255,.1);
+	box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+}
+@media screen and (max-width: 1200px){
+	.cursor,.cursor2{
+		display: none
+	}
+}	
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+/* -------------------cursor css end----------------- */
 
 /* -------------navbar start-------------- */
 .navbar{
@@ -45,14 +109,6 @@ body {
 .navbar .nav-item .nav-link:hover, .navbar .nav-item .nav-link.active, .navbar .nav-item .nav-link:focus{
     color: #C6915C;
     font-weight: bold;
-}
-.cv-btn{
-    background-color: #C6915C;
-    color: #000000;
-    padding: 14px 30px;
-    border: 1px;
-    border-radius: 50%;
-    border-bottom: 3px solid #e8c29c;
 }
 /* -------------navbar end-------------- */
 
@@ -200,10 +256,26 @@ padding-top: 150px;
 }
 .about .resume .education b{
     font-weight: lighter;
+    font-size: 18px;
+    color: #b8a694;
 }
-@media(max-width: 991px){
+@media(max-width: 912px){
     .about{
         padding: 10px;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .about .resume{
+        padding: 10px;
+    }
+    .about .resume .education{
+        padding: 10px 25px;
+    }
+    .about .resume .right-border{
+        border-right: 0;
+    }
+    .about .resume  hr{
+        background-color: white;
     }
 }
 /* --------------------about end----------------------- */
@@ -233,6 +305,12 @@ padding-top: 150px;
 .skills .card-items{
     margin-top: 50px;
 }
+@media(max-width: 991px){
+    .skills{
+        margin-top: 100px;
+        padding: 10px;
+    }
+}
 
 /* --------------------skills end----------------------- */
 
@@ -240,9 +318,6 @@ padding-top: 150px;
 .portfolio{
     margin-top: 150px;
 }
-/* .portfolio-top{
-
-} */
 .portfolio .portfolio-cards{
     margin-top: 50px;
 }
@@ -282,6 +357,31 @@ padding-top: 150px;
     color: white;
     transition: 0.3s ease;
 }
+@media(max-width: 991px){
+    .portfolio{
+        margin-top: 100px;
+    }
+    .portfolio a{
+        text-decoration: none;
+    }
+    .portfolio .d-flex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .portfolio .d-flex button{
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .portfolio .portfolio-content{
+        height: 100%;
+        width: 100%;
+    }
+    .portfolio-top{
+        margin-top: 150px;
+    }
+}
+
 /* --------------------portfolio end----------------------- */
 
 /* --------------------testimonial start----------------------- */
@@ -310,6 +410,16 @@ padding-top: 150px;
     border-radius: 50%;
     margin: 0 auto;
     display: block;
+ }
+ @media(max-width: 991px){
+    .testimonial{
+        margin-top: 100px;
+        padding: 10px;
+     }
+     .testimonial .testimonial-carousel .card{
+        padding: 20px10px;
+        width: 100%; 
+     }
  }
 /* --------------------testimonial end----------------------- */
 
@@ -354,6 +464,23 @@ padding-top: 150px;
 .contact  form textarea::placeholder, .contact  form input::placeholder{
     color: #b8a694;
 }
+@media(max-width: 991px){
+    .contact{
+        margin-top: 100px;
+        padding: 10px;
+        text-align: center;
+    }
+    .contact .social .d-flex{
+        justify-content: center;
+    }
+    .contact  form{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        padding: 30px 20px;
+        margin-top: 50px;    
+}
+}
 /* --------------------contact end----------------------- */
 
 /* --------------------footer start----------------------- */
@@ -378,5 +505,17 @@ padding-top: 150px;
 }
 .footer hr{
     background-color: #6e6d6d;
+}
+@media(max-width: 991px){
+    .footer{
+        margin-top: 100px;
+        text-align: center;    
+}
+    .footer .icons .d-flex{
+        justify-content: center;
+}
+.footer img{
+    margin-bottom: 50px;
+}
 }
 /* --------------------footer end----------------------- */
