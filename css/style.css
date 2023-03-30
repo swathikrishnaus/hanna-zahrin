@@ -105,6 +105,7 @@ a {
 .navbar .nav-item .nav-link{
     color: white;
     transition: 0.3s ease;
+    padding: 20px;
 }
 .navbar .nav-item .nav-link:hover, .navbar .nav-item .nav-link.active, .navbar .nav-item .nav-link:focus{
     color: #C6915C;
@@ -116,7 +117,6 @@ a {
 .navbar-toggler {
     border: 0 !important;
 }
-
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -124,7 +124,6 @@ a {
     box-shadow: none !important;
     border: 0 !important;
 }
-
 /* Lines of the Toggler */
 .toggler-icon{
     width: 30px;
@@ -133,23 +132,19 @@ a {
     display: block;
     transition: all 0.2s;
 }
-
 /* Adds Space between the lines */
 .middle-bar{
     margin: 5px auto;
 }
-
 /* State when navbar is opened (START) */
 .navbar-toggler .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
 }
-
 .navbar-toggler .middle-bar {
     opacity: 0;
     filter: alpha(opacity=0);
 }
-
 .navbar-toggler .bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
